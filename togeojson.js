@@ -12,7 +12,7 @@ toGeoJSON = (function() {
         } return h;
     }
     // all Y children of X
-    function get(x, y) { return x.getElementsByTagName(y); }
+    function get(x, y) { return x.getElementsByTagNameNS('*', y); }
     function attr(x, y) { return x.getAttribute(y); }
     function attrf(x, y) { return parseFloat(attr(x, y)); }
     // one Y child of X, if any, otherwise null
