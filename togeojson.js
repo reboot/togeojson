@@ -35,6 +35,8 @@ toGeoJSON = (function() {
     function coord1(v) { return numarray(v.replace(removeSpace, '').split(',')); }
     // get all coordinates from a coordinate array as [[],[]]
     function coord(v) {
+        if (v == null)
+            return [];
         var coords = v.replace(trimSpace, '').split(splitSpace),
             o = [];
         for (var i = 0; i < coords.length; i++) {
